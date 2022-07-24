@@ -77,7 +77,20 @@ function M.setup(opts)
         --   -- Get the language server to recognize the `vim` global
         --   globals = { "vim" },
         -- },
-        -- hint = { enable = true },
+
+        format = {
+          enable = false,
+        },
+
+        hint = {
+          enable = true,
+          arrayIndex = "Disable", -- "Enable", "Auto", "Disable"
+          await = true,
+          paramName = "Disable", -- "All", "Literal", "Disable"
+          paramType = false,
+          semicolon = "Disable", -- "All", "SameLine", "Disable"
+          setType = true,
+        },
         workspace = {
           -- Make the server aware of Neovim runtime files
           library = M.library(opts),
