@@ -71,13 +71,15 @@ function M.setup(opts)
           version = "LuaJIT",
           -- Setup your lua path
           path = M.path(),
+          special = {
+            reload = "require",
+          },
         },
         completion = { callSnippet = "Replace" },
-        -- diagnostics = {
-        --   -- Get the language server to recognize the `vim` global
-        --   globals = { "vim" },
-        -- },
-
+        diagnostics = {
+          -- Get the language server to recognize the `vim` global
+          globals = { "vim" },
+        },
         format = {
           enable = false,
         },
